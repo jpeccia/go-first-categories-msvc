@@ -21,6 +21,7 @@ func (u *createCategoryUseCase) Execute(name string) error {
 		return err
 	}
 
+	//TODO: persist-entity-to-db
 	log.Println(category)
 
 	return nil
