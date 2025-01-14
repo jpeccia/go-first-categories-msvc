@@ -8,7 +8,7 @@ type InMemoryCategoryRepository struct {
 
 func NewInMemoryCategoryRepository() *InMemoryCategoryRepository {
 	return &InMemoryCategoryRepository{
-		db: make([]*entities.Category, 0)
+		db: make([]*entities.Category, 0),
 	}
 }
 
