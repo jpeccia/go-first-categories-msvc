@@ -9,11 +9,11 @@ import (
 
 type createCategoryUseCase struct {
 	// db
-	repository *repositories.InMemoryCategoryRepository
+	repository repositories.InMemoryCategoryRepository
 }
 
-func NewCreateCategoryUseCase() *createCategoryUseCase {
-	return &createCategoryUseCase{}
+func NewCreateCategoryUseCase(repository repositories.InMemoryCategoryRepository) *createCategoryUseCase {
+	return &createCategoryUseCase{repository}
 }
 
 func (u *createCategoryUseCase) Execute(name string) error {
